@@ -1,0 +1,56 @@
+table {
+/*граница(обводка)*/
+border: 2px purple solid;
+/*Убираем отступы между ячейками таблицы*/
+	border-collapse: collapse;
+}
+td {
+    border: 1px solid purple;
+    background: Bisque;
+    /*Выравнивание текста по центру*/
+    text-align: center;
+}
+th {
+    border: 1px solid purple;
+    /*Цвет фона*/
+    background: Wheat;
+    /*Цвет текста*/
+    color: purple;
+}
+header {
+	/*Ширина*/
+	width: 70%;
+	background: lavender;
+	/*Высота*/
+	height: 60px;
+	/*Внешние отступы*/
+	margin: auto;
+	/*Текст по центру*/
+	text-align: center;
+	/*Способы отображения элементов внутри этого тега*/
+	display: flex;
+	/*Распределение элементов унтри*/
+	justify-content: space-around;
+	/*Выравнивание элементов по вертикали*/
+	align-items: middle;
+
+}
+
+body {
+	background: silver;
+	margin: 0;
+}
+
+#left {
+	/*Поворот стрелки*/
+	transform: rotate(180deg);
+	width: 64px;
+}
+#right {
+	width: 64px;
+}
+
+main {
+	width: 70%;
+	margin: auto;
+}
