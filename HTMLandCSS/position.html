@@ -3,9 +3,67 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Свойство position</title>
 <link rel="stylesheet" href="style.css">
-	<title></title>
+<style>
+	#container {
+		width: 50%;
+		margin: auto;
+	}
+    #header, #footer {
+    	width: 100%;
+    	background-color: indigo;
+    	color: white;
+
+    }
+    #content {
+    	width: 100%;
+    	background-color: sandybrown;
+    	position: relative;
+    }
+    #div1 {
+    	margin: 0 25px;
+    	height: 30px;
+    	background-color: lightseagreen;
+
+    }
+    #div2 {
+    	margin: 0 25px;
+    	height: 30px;
+    	background-color:firebrick;
+    	/*Относительно обычного расположения*/
+    	position: relative;
+    	/*left right top bottom*/
+    	left: -100px;
+    	top: 50px;
+    	
+    }
+    #div3 {
+    	margin: 0 25px;
+    	height: 35px;
+    	background-color: purple;
+    	/*Абсолютное позиционирование*/
+    	position: absolute;
+    	right: 20px;
+    	left: 300px;
+
+
+    	
+    }
+#div4 {
+    	margin: 0 25px;
+    	height: 40px;
+    	background-color: lemonchiffon;
+    	
+    }
+    #div5 {
+    	margin: 0 25px;
+    	height: 45px;
+    	background-color: teal;
+    	
+    }
+</style>
+	
 </head>
 <body>
 	<!-- Шапка сайта -->
@@ -17,7 +75,35 @@
 	    </a>
 	</header>
 	<main>
-		
+		<div id="container">
+			<div id="header">id="header"</div>
+			<div id="content">>id="content"
+				<div id="div1">id="div1"</div>
+				<div id="div2">id="div2"</div>
+				<div id="div3">id="div3"</div>
+				<div id="div4">id="div4"</div>
+				<div id="div5">id="div5"</div>
+			</div>
+		<div id="footer">id="footer"</div>
+	</div>
+	<h1>Итого:</h1>
+	<h2>static</h2>
+	<p>Иначе называется "без позиционирования"</p>
+	<h2>relative</h2>
+	<p>Сдвигает элемент относительно текущего места</p>
+	<ol>
+		<li>Противоположные границы left/right(top/bottom) одновременно указать нельзя.</li>
+		<li>Окружающие элементы ведут себя так, будто элемент никуда не сдвигался.</li>
+	</ol>
+	<h2>absolute</h2>
+	<p>визуально переносит элемент на новое место. <br> - Новое место вычисляется по координатам left/top/right/bottom относительно ближайшего позиционированного родителя. Если такого родителя нет, то им считается окно.</p>
+	<ul>
+		<li>Ширина элемента по умолчанию устанавливается по содержимому.</li>
+		<li>Можно указать одновременно противоположные границы left/right(top/bottom). Элемент при этом растянется.</li>
+		<li>Окружающие элементы заполняют освободившееся место.</li>
+	</ul>
+	<h2>fixed</h2>
+	<p>Подвид абсолютного позиционирования, при котором элемент привязывается к координатам окна, а не документа. При прокрутке остаётся на том же месте.</p>
 	</main>
 	
 </body>
